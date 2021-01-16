@@ -1,0 +1,30 @@
+Para minimizar con el metodo simplex, se deben agregar, aparte de las variables de holgura, las variable artificiales "A", el coeficiente de dicha variable artificial sera "M". Donde "M" es un valor exageradamente grande, que tiende al infinito
+
+A esta matriz de minimizar, ademas, se le agregarán dos nuevas filas "Zj" y "Cj-Zj" y una columna donde estarán los coeficientes de las variables artificiales donde:
+
+Cj = Valores o coeficientes de las variables basicas
+Zj = La suma del producto de cada elemento de la columna por el coeficiente de la variable artificial
+Cj - Zj = La diferencia o ressta entre Cj menos Zj 
+
+1) Se tendrá la matriz cargada teniendo los valores de los coeficientes de las X, las S y M, aedmas de resultado R, sacado de restrincciones y de la funcion objetivo
+
+2) Necesitamos calcular la nueva fila "Zj", hacer una funcion para esto, es la suma del producto de los elementos de dicha columna por el valor de la columna de coeficientes de variables basicas
+
+3) Calcular Cj - Zj, hacer una funcion para esto, será basicamente la resta de los valores de Cj con su respectivo Zj, recordar esto es la ultima fila
+
+4) Finalmente teniendo Cj - Zj, podemos hallar la columna pivote, para esto, simplemente se escogerá la columna, donde este el valor mas negativo de Cj - Zj, esa sera la columna pivote
+
+5) La fila pivote se calcula de la misma manera que en el metodo de maximizar
+
+6) Teniendo columna y fila, ya tenemos finalmente el elemento pivote, basicamente la interseccion
+
+7) Vamos a sustituir el valor de la variable basica que corresponde a esa columna, con el valor correspondiente de la columna donde estan los coeficientes de variables artificiales
+
+8) Hacer el elemento pivote 1, igual que en el metodo de maximizar
+
+9) Hacer los elementos arriba y abajo del pivote (columna) ceros, igual que en el de maximizar
+
+10) Despues de hacer 0s y hacer el paso 7, repetimos el paso 2 y 3
+
+11) repetir el proceso hasta que no haya ningun elemento de Cj - Zj que sea negativo
+
