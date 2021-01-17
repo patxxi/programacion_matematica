@@ -76,6 +76,12 @@ function matrix = makeColumnPivotZeros(matrix, rowIndexPivot, columnIndexPivot)
 	end
 end
 
+function result(matrix)
+
+	fprintf("\n\nSolucion: \n\n Z = %d \n\nX1 = %d \n\nX2 = %d\n", matrix(end,end), matrix(2,end), matrix(1,end));
+
+end
+
 iter = 1;
 
 matrix = getZj(matrix, variablesBasic);
@@ -141,3 +147,4 @@ while(true)
 	iter++;
 end
 
+result(matrix);

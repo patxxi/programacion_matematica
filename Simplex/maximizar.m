@@ -44,10 +44,8 @@ function matrix = makeColumnPivotZeros(matrix, rowIndexPivot, columnIndexPivot)
 	end
 end
 
-function result(matrix)
-	for i= 1: numVariables
-		columnX = matrix();
-	end
+function result(newMatrix)
+	fprintf("\n\nSolucion: \n\n Z = %d \n\nX1 = %d \n\nX2 = %d\n", newMatrix(1,end), newMatrix(2,end), newMatrix(3,end));
 end
 
 newMatrix = matrixOriginal;
@@ -66,3 +64,4 @@ end
 
 
 
+result(newMatrix);
