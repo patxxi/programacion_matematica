@@ -1,9 +1,8 @@
 function bool = verificar(tabla)
-    f = size(tabla,1);
-    c = size(tabla,2);
+    columnas = size(tabla,2);
     bool = true;
-    for i=2:c-1
-        if 1 == 1#(tabla(1,i) >= 1)
+    for i=2:columnas-1
+        if  (tabla(1,i) > 0)
             bool = false;
             printf('El elemento %d > 0 No Cumple la condicion de Resultado Optimo, Se hace otra Iteracion\n\n',tabla(1,i))
             break

@@ -1,12 +1,12 @@
 ## Funcion encargada de la creacion de una nueva ntabla simplex
 ## La calcula según los pivotes respectivos
 function tabla = actualizarTabla(viejaTabla, columnaPivote, filaPivote, elementoPivote)
-disp("Se crea Tabla vacia para los proximos resultados...");
+#disp("Se crea Tabla vacia para los proximos resultados...");
 tabla = zeros(size(viejaTabla));
     
     for k = 1:size(viejaTabla,2)
-        fprintf('\nActualizando Fila Pivote... ')
-        printf('Tabla(%d,%d) = %d / %d    ->  ',filaPivote,k,viejaTabla(filaPivote,k),elementoPivote)
+        #fprintf('\nActualizando Fila Pivote... ')
+        #printf('Tabla(%d,%d) = %d / %d    ->  ',filaPivote,k,viejaTabla(filaPivote,k),elementoPivote)
         tabla(filaPivote,k) = viejaTabla(filaPivote,k) / elementoPivote;
     endfor
 
@@ -19,10 +19,10 @@ tabla = zeros(size(viejaTabla));
 
             #Calculo de las demas filas
             else
-                fprintf('\nActualizando Otras Filas... ') 
-                printf('Aux = %d * %d  ->  ',viejaTabla(i,columnaPivote),tabla(filaPivote,j));
+        #        fprintf('\nActualizando Otras Filas... ') 
+         #       printf('Aux = %d * %d  ->  ',viejaTabla(i,columnaPivote),tabla(filaPivote,j))
                 aux = (viejaTabla(i,columnaPivote) * tabla(filaPivote,j));
-                printf('Tabla(%d,%d) = %d - %d    ->  ',i,j,viejaTabla(i,j),aux);
+          #      printf('Tabla(%d,%d) = %d - %d    ->  ',i,j,viejaTabla(i,j),aux);
                 tabla(i,j) = viejaTabla(i,j) - aux;
             endif
             
