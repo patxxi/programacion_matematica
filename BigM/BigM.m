@@ -14,10 +14,10 @@ tabla = [  -4       -1        0    0   -100 -100  0 ; # Z
             4        3       -1    0     0    1   6 ; # A2
             1        1        0    1     0    0   3 ] # S2
 
-variables_filas = ["Z"; "A1"; "A2"; "S2"]
+variables_filas = ["Z"; "R"; "r"; "s"]
 
 
-VARIABLES_COLUMNAS = ["X ", "Y ", "S1 ", "S2 ", "A1 ", "A2 "]
+VARIABLES_COLUMNAS = ["X", "Y", "S", "s", "R", "r"];
 
 
 fprintf("\nEn Columna Z(1) Hay valores M(100), Realizando Ajuste\n\n")

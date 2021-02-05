@@ -19,6 +19,7 @@ fprintf('Buscando Columna Pivote (Donde esta el Numero mas positivo de "Z")\n')
     for i = 2 : size(tabla,1) # Por cada fila que no sea la fila Z
         if (tabla(i,columnaPivote) != 0)
         razon = (tabla(i,size(tabla,2)) / tabla(i,columnaPivote));
+        razon = round(1000000 * razon) / 1000000
         endif
 
         if (menor > razon && razon >= 0 )
