@@ -30,5 +30,5 @@ tabla = zeros(size(viejaTabla));
     endfor
     
     fprintf("\n\n")
-
+     
 endfunction

@@ -14,13 +14,13 @@ tabla = [  -4   -1      0    0    -100 -100      0 ; # Z
             4    3     -1    0      0    1       6 ; # A2
             1    1      0    1      0    0       3 ] # S2
 
-variables_filas = ["Z"; "A1"; "A2"; "S2"]
+variables_filas = ["Z"; "R"; "r"; "s"]
 
 
-VARIABLES_COLUMNAS = ["X", "Y", "S1", "S2", "R1", "R2"];
+VARIABLES_COLUMNAS = ["X", "Y", "S", "s", "R", "r"];
 
 
-fprintf("\nEn Columna Z(1) Hay valores M(100), Realizando Ajuste\n\n")
+fprintf("\nEn Fila Z(1) Hay valores M(100), Realizando Ajuste\n\n")
 disp('Nueva Fila Z = Anterior Fila Z + (100 x Fila R1(2)) + (100 x Fila R2(3))')
 for j = 1:size(tabla,2)
     fprintf('Ajustando Tabla...\n')
