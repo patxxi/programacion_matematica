@@ -1,5 +1,5 @@
 fprintf("#############################################################################\n")
-fprintf("#                         Minimizacion de Costos                            #\n")
+fprintf("#                            Solucion Inicial                               #\n")
 fprintf("#                     Metodo de la Esquina Noroeste                         #\n")
 fprintf("# Segun:                                                                    #\n")
 fprintf("#   Caracas:       Local 1 =  8, Local 2 =  6, Local 3 = 10, Local 4 = 9    #\n")
