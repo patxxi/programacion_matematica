@@ -1,15 +1,17 @@
 
-matrixOriginal = [1, -200, -300, 0, 0, 0, 0;             
-          0,    3,    2, 1, 0, 0, 100;
-          0,    2,    4, 0, 1, 0, 120;
-          0,    1,    1, 0, 0, 1, 45];
+matrixOriginal = [
+	-2,-3,0,0,0,0;
+	10,5,1,0,0,600;
+	6,20,0,1,0,600;
+	8,10,0,0,1,600;
+]
 numVariables = 2;
 
 fprintf("Valores cargados de la matriz, con su respectiva funcion objetivo, restricciones y variables de holgura\n\n");
 matrixOriginal;
 disp(matrixOriginal);
 
-function lowerColumnIndex = getColumnIndex(matrix)
+function [value,lowerColumnIndex] = getColumnIndex(matrix)
 	[value, lowerColumnIndex] = min(matrix(1,:));
 end
 
@@ -50,9 +52,12 @@ end
 
 newMatrix = matrixOriginal;
 iter = 1;
-while(newMatrix(1,2) < 0 || newMatrix(1,3) < 0)
+while(true)
 	fprintf("\n\n indices de pivote y pivote de la iteracion: %d\n\n",iter);
-	columIndex = getColumnIndex(newMatrix)
+	[minValue,columIndex] = getColumnIndex(newMatrix)
+	if(minValue >= 0)
+		break;
+	end
 	rowIndex = getPivotRoxIndex(newMatrix,columIndex)
 	pivot = getPivot(newMatrix, rowIndex, columIndex)
 	newMatrix = makePivotOne(newMatrix, pivot, rowIndex);
